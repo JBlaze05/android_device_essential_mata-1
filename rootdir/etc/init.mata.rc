@@ -593,6 +593,8 @@ on property:ro.boot.carrier.sku=*
 on property:sys.boot_completed=1
     setprop sys.io.scheduler bfq
 
+    chown system system /sys/kernel/debug/sched_features
+
     # Enable ZRAM
     swapon_all /vendor/etc/fstab.mata
 
